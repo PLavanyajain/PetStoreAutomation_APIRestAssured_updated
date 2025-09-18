@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-17T21:41:39 IST" name="Suite" finished-at="2025-09-17T21:41:53 IST" duration-ms="14331">
+  <suite started-at="2025-09-18T22:47:58 IST" name="Petstore API Suite" finished-at="2025-09-18T22:48:11 IST" duration-ms="13157">
     <groups>
     </groups>
-    <test started-at="2025-09-17T21:41:39 IST" name="Test" finished-at="2025-09-17T21:41:53 IST" duration-ms="14331">
-      <class name="api.test.UserTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:api.test.UserTest@6f03482]" started-at="2025-09-17T21:41:39 IST" name="setup" finished-at="2025-09-17T21:41:41 IST" duration-ms="1990" status="PASS">
+    <test started-at="2025-09-18T22:47:58 IST" name="User Tests" finished-at="2025-09-18T22:48:10 IST" duration-ms="12338">
+      <class name="api.test.UserTest2resourcebundle">
+        <test-method is-config="true" signature="setup()[pri:0, instance:api.test.UserTest2resourcebundle@1fa121e2]" started-at="2025-09-18T22:47:58 IST" name="setup" finished-at="2025-09-18T22:48:00 IST" duration-ms="1855" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testPostUser()[pri:1, instance:api.test.UserTest@6f03482]" started-at="2025-09-17T21:41:41 IST" name="testPostUser" finished-at="2025-09-17T21:41:47 IST" duration-ms="6093" status="PASS">
+        <test-method signature="LoginUser()[pri:0, instance:api.test.UserTest2resourcebundle@1fa121e2]" started-at="2025-09-18T22:48:00 IST" name="LoginUser" finished-at="2025-09-18T22:48:07 IST" duration-ms="6810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginUser -->
+        <test-method signature="testPostUser()[pri:1, instance:api.test.UserTest2resourcebundle@1fa121e2]" started-at="2025-09-18T22:48:07 IST" name="testPostUser" finished-at="2025-09-18T22:48:09 IST" duration-ms="2044" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPostUser -->
-        <test-method signature="testgetUserByName()[pri:2, instance:api.test.UserTest@6f03482]" started-at="2025-09-17T21:41:47 IST" name="testgetUserByName" finished-at="2025-09-17T21:41:49 IST" duration-ms="1556" status="PASS">
+        <test-method signature="LogoutUser()[pri:5, instance:api.test.UserTest2resourcebundle@1fa121e2]" started-at="2025-09-18T22:48:09 IST" name="LogoutUser" finished-at="2025-09-18T22:48:10 IST" duration-ms="1515" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testgetUserByName -->
-        <test-method signature="testUpdateUser()[pri:3, instance:api.test.UserTest@6f03482]" started-at="2025-09-17T21:41:49 IST" name="testUpdateUser" finished-at="2025-09-17T21:41:52 IST" duration-ms="3018" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUpdateUser -->
-        <test-method signature="test_DeleteUser()[pri:4, instance:api.test.UserTest@6f03482]" started-at="2025-09-17T21:41:52 IST" name="test_DeleteUser" finished-at="2025-09-17T21:41:53 IST" duration-ms="1543" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_DeleteUser -->
-      </class> <!-- api.test.UserTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- LogoutUser -->
+      </class> <!-- api.test.UserTest2resourcebundle -->
+    </test> <!-- User Tests -->
+    <test started-at="2025-09-18T22:48:11 IST" name="Store Tests" finished-at="2025-09-18T22:48:11 IST" duration-ms="2">
+    </test> <!-- Store Tests -->
+    <test started-at="2025-09-18T22:48:11 IST" name="Other Tests" finished-at="2025-09-18T22:48:11 IST" duration-ms="4">
+    </test> <!-- Other Tests -->
+  </suite> <!-- Petstore API Suite -->
 </testng-results>

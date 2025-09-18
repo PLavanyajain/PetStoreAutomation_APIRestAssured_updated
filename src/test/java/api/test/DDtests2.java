@@ -6,9 +6,19 @@ import api.Utilities.DataProviders;
 import api.endpoints.UserEndpoints2;
 import api.payload.User;
 import io.restassured.response.Response;
-
+import org.testng.annotations.Test;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
+import api.Utilities.*;
 @Test(priority = 1,dataProvider="Data",dataProviderClass=DataProviders.class)
 public class DDtests2 {
+	 @Parameters("excelFile") // receives value from testng.xml
+	    @DataProvider(name = "UserData")
+	    public Object[][] getUserData(String excelFile) throws Exception {
+	        String path = System.getProperty("user.dir") + "/src/test/resources/testdata/" + excelFile;
+	        return ExcelUtils.getData(path, "Users");
+	 }
+	        
 	public void TestPostUser(String userID,String userName,String Fname,String Lname,String Emailid,String pwd,String ph)
 	{
 		User userpayload =new User(); // pojo 

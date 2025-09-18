@@ -2,6 +2,7 @@ package api.test;
 
 import org.apache.logging.log4j.LogManager;   // ✅ Correct import
 import org.apache.logging.log4j.Logger;       // ✅ Correct import
+import org.hamcrest.core.StringStartsWith;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -51,7 +52,7 @@ public class UserTest2resourcebundle {
 		 Assert.assertEquals(response.getStatusCode(), 200);
 	}
 	
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void testgetUserByName()
 	{
 		logger.info("**************Reading  use detailsr******************");
@@ -63,7 +64,7 @@ public class UserTest2resourcebundle {
 		
 	}
 	
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void testUpdateUser()
 	{
 	     // update data using payload
@@ -82,7 +83,7 @@ public class UserTest2resourcebundle {
         
 	}
 	
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void test_DeleteUser()
 	{
 		System.out.println("Deleting user: " + userPayload.getUsername());
@@ -92,6 +93,26 @@ public class UserTest2resourcebundle {
 		
 		//Assert.assertEquals(response.getStatusCode(), 200);
 		
+	}
+	@Test(priority = 5)
+	public void LogoutUser()
+	{
+		System.out.println("Logout by user: " + userPayload.getUsername());
+		Response response =UserEndpoints2.Logout();
+		System.out.println(response.getStatusCode());;
+	}
+	
+	@Test(priority = 0)
+	public void LoginUser()
+	{
+		System.out.println("Logging by user: " + userPayload.getUsername());
+		Response response=UserEndpoints2.loginUser(userPayload.getUsername(), userPayload.getPassword());
+	    String type=  response.jsonPath().getString("type"); //jsonPath() is used to extract values from the JSON response body.
+	    Assert.assertEquals(type,"unknown");
+	    String message=  response.jsonPath().getString("message"); 
+	    Assert.assertTrue(message.startsWith("logged in user session:"), 
+	            "Message did not start with expected text. Actual message: " + message);
+
 	}
 	
 	

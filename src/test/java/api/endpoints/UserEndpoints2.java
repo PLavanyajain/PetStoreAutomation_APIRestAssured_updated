@@ -75,6 +75,25 @@ public class UserEndpoints2 {
 	return response;	
 	
 	}
+	public static Response loginUser(String username,String password)
+	{
+		String Login_Url=getUrl().getString("Get_User_Login");
+		Response response=given()
+		 .accept(ContentType.JSON).pathParam("username", username).pathParam("password", password)
+		.when().get(Login_Url);
+		
+	return response;	
+	}
+	public static Response Logout()
+	{
+		String LogoutUser=getUrl().getString("get_User_url_logout");
+		Response response=given()
+		.accept(ContentType.JSON)
+		.when().get(LogoutUser);
+		
+		return response;
+		
+	}
 	
 
 }

@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-<listeners>
-<listener class-name="api.Utilities.ExtentReportManager"/>
-</listeners>	
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="api.test.UserTest"/>
-     
-     <!--  <class name="api.test.Test_Store_DD1"/>
-       <class name="api.test.DDtests2"/> -->
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+<suite name="Petstore API Suite" verbose="1" parallel="false">
+
+    <!-- Attach Listeners -->
+    <listeners>
+        <listener class-name="api.Utilities.ExtentReportManager"/>
+    </listeners>	
+
+    <!-- User Tests -->
+    <test name="User Tests" thread-count="5">
+        <parameter name="excelFile" value="UserData.xlsx"/>
+        <classes>
+           <class name="api.test.UserTest2resourcebundle"/>
+         <!-- <class name="api.test.Test_Store_DD1"/>
+          <class name="api.test.UserTest"/> 
+         <class name="api.test.DDtests2"/>
+          <class name="api.test.UserTest2resourcebundle"/> -->
+        </classes>
+    </test>
+
+    <!-- Store Tests -->
+    <test name="Store Tests" thread-count="5">
+        <parameter name="excelFile" value="StoreData.xlsx"/>
+       <!--   <classes>
+           <class name="api.test.Test_Store_DD1"/>
+        </classes>-->
+    </test>
+
+    <!-- Extra Tests -->
+    <test name="Other Tests" thread-count="5">
+         <!-- <classes>
+            <class name="api.test.DDtests"/>
+            <class name="api.test.DDtests2"/>
+            <class name="api.test.UserTest2resourcebundle"/>
+           </classes> -->
+        
+    </test>
+
+</suite>
