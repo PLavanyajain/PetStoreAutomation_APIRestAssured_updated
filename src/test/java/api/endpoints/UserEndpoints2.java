@@ -19,8 +19,6 @@ public class UserEndpoints2 {
 		ResourceBundle routes=ResourceBundle.getBundle("routes");  //Load properties file
 				return  routes;
 	}
-	
-	
 	public static  Response createUser(User payload)
 	{
 	String post_url=getUrl().getString("post_user_url");

@@ -22,8 +22,7 @@ public class DDtests {
 		
 		Response response=UserEndpoints.createUser(userpayload);
 		//response.then().log().all();
-		 Assert.assertEquals(response.getStatusCode(), 200);
-			
+		Assert.assertEquals(response.getStatusCode(), 200);			
 	}
 	@Test(priority = 2,dataProvider = "UserNames",dataProviderClass=DataProviders.class)
 	public void DeleteUserByName(String username)

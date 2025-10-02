@@ -5,8 +5,8 @@ public class User {
 	String username;
 	String firstName;
 	String lastName;
-	String email;
-	String password;
+	private String email;
+	private String password;
 	String phone;
 	int userStatus=0;
 	
