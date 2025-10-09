@@ -92,6 +92,11 @@ public class UserTest {
 		//Assert.assertEquals(response.getStatusCode(), 200);
 		
 	}
+	@Test(priority = 4)
+	public void test_DeleteUser1()
+	{
+		System.out.print("Added dummy");
+	}
 	
 	
 
