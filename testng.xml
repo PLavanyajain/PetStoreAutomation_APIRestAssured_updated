@@ -8,11 +8,14 @@
     </listeners>	
 
     <!-- User Tests -->
-    <test name="User Tests" thread-count="5">
+    <!-- --><test name="User Tests" thread-count="5">
         <parameter name="excelFile" value="UserData.xlsx"/>
         <classes>
-           <class name="api.test.UserTest2resourcebundle"/>
+        
+           <class name="api.test.ReqresTest"/>
+           
          <!-- <class name="api.test.Test_Store_DD1"/>
+         <class name="api.test.JSONPlaceholder"/>
           <class name="api.test.UserTest"/> 
          <class name="api.test.DDtests2"/>
           <class name="api.test.UserTest2resourcebundle"/> -->
@@ -27,14 +30,7 @@
         </classes>-->
     </test>
 
-    <!-- Extra Tests -->
-    <test name="Other Tests" thread-count="5">
-         <!-- <classes>
-            <class name="api.test.DDtests"/>
-            <class name="api.test.DDtests2"/>
-            <class name="api.test.UserTest2resourcebundle"/>
-           </classes> -->
-        
-    </test>
+  
+
 
 </suite>

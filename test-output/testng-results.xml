@@ -1,33 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-19T14:35:03 IST" name="Petstore API Suite" finished-at="2025-09-19T14:35:16 IST" duration-ms="13108">
+  <suite started-at="2025-10-29T18:02:47 IST" name="Petstore API Suite" finished-at="2025-10-29T18:02:57 IST" duration-ms="10246">
     <groups>
     </groups>
-    <test started-at="2025-09-19T14:35:03 IST" name="User Tests" finished-at="2025-09-19T14:35:15 IST" duration-ms="12394">
-      <class name="api.test.UserTest2resourcebundle">
-        <test-method is-config="true" signature="setup()[pri:0, instance:api.test.UserTest2resourcebundle@1fa121e2]" started-at="2025-09-19T14:35:03 IST" name="setup" finished-at="2025-09-19T14:35:05 IST" duration-ms="1969" status="PASS">
+    <test started-at="2025-10-29T18:02:47 IST" name="User Tests" finished-at="2025-10-29T18:02:56 IST" duration-ms="9493">
+      <class name="api.test.ReqresTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:api.test.ReqresTest@9d5509a]" started-at="2025-10-29T18:02:47 IST" name="setup" finished-at="2025-10-29T18:02:49 IST" duration-ms="1874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="LoginUser()[pri:0, instance:api.test.UserTest2resourcebundle@1fa121e2]" started-at="2025-09-19T14:35:05 IST" name="LoginUser" finished-at="2025-09-19T14:35:12 IST" duration-ms="6796" status="PASS">
+        <test-method signature="Test_Get_Reqres_002()[pri:1, instance:api.test.ReqresTest@9d5509a]" started-at="2025-10-29T18:02:49 IST" name="Test_Get_Reqres_002" finished-at="2025-10-29T18:02:55 IST" duration-ms="6277" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginUser -->
-        <test-method signature="testPostUser()[pri:1, instance:api.test.UserTest2resourcebundle@1fa121e2]" started-at="2025-09-19T14:35:12 IST" name="testPostUser" finished-at="2025-09-19T14:35:14 IST" duration-ms="2008" status="PASS">
+        </test-method> <!-- Test_Get_Reqres_002 -->
+        <test-method signature="testPost_Reqres_01()[pri:1, instance:api.test.ReqresTest@9d5509a]" started-at="2025-10-29T18:02:55 IST" name="testPost_Reqres_01" finished-at="2025-10-29T18:02:56 IST" duration-ms="1224" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testPostUser -->
-        <test-method signature="LogoutUser()[pri:5, instance:api.test.UserTest2resourcebundle@1fa121e2]" started-at="2025-09-19T14:35:14 IST" name="LogoutUser" finished-at="2025-09-19T14:35:15 IST" duration-ms="1513" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogoutUser -->
-      </class> <!-- api.test.UserTest2resourcebundle -->
+        </test-method> <!-- testPost_Reqres_01 -->
+      </class> <!-- api.test.ReqresTest -->
     </test> <!-- User Tests -->
-    <test started-at="2025-09-19T14:35:16 IST" name="Store Tests" finished-at="2025-09-19T14:35:16 IST" duration-ms="1">
+    <test started-at="2025-10-29T18:02:57 IST" name="Store Tests" finished-at="2025-10-29T18:02:57 IST" duration-ms="4">
     </test> <!-- Store Tests -->
-    <test started-at="2025-09-19T14:35:16 IST" name="Other Tests" finished-at="2025-09-19T14:35:16 IST" duration-ms="2">
-    </test> <!-- Other Tests -->
   </suite> <!-- Petstore API Suite -->
 </testng-results>
