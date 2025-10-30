@@ -35,12 +35,14 @@ public class ReqresTest {
 		
 		reqres.setEmail("eve.holt@reqres.in");
     	reqres.setPassword("cityslicka");
+    	reqres.setName("Lavanyabhuvan Updated");
+    	reqres.setJob("Senior Automation Engineer");
 		
 		logger=LogManager.getLogger(this.getClass());
 	}
 	
 	@Test(priority = 1)
-	public void testPost_Reqres_01()
+	public void Test_Post_Reqres_001()
 	{
 		logger.info("*********&&******Creating user_testPost_Reqres_01*********&&*********");
 		Response response=Reqres_Endpoints.Create_Post_reqres(reqres);
@@ -104,8 +106,41 @@ public class ReqresTest {
 		Assert.assertEquals(response.getStatusCode(), 200);
 		Assert.assertNotEquals(response.jsonPath().getString("token"),"Token should not be null");
 	}
+	@Test(priority = 1)
+	public void Test_User_Update_Reqres_004()
+	{
+		
+		logger.info("*********Updating user_Test_Get_Reqres_002****************");
+		Response response=Reqres_Endpoints.Update_user_Reqres(reqres);
 	
-	 
-	
+		
+		response.then().log().all();
+		
+		Assert.assertEquals(response.getStatusCode(),200);
+		Assert.assertNotEquals(response.jsonPath().getString("updatedAt"),"Data should be updated");
+		
+	    String updatedName = response.jsonPath().getString("name");
+	    String updatedJob = response.jsonPath().getString("job");
+	    String updatedAt = response.jsonPath().getString("updatedAt");
 
+	    Assert.assertEquals(updatedName, "Lavanyabhuvan Updated", "Name should be updated correctly");
+	    Assert.assertEquals(updatedJob, "Senior Automation Engineer", "Job should be updated correctly");
+	    Assert.assertNotNull(updatedAt, "updatedAt should not be null");
+
+	    logger.info("✅ User updated successfully: " + updatedName + " | " + updatedJob);
+	    logger.info("✅ UpdatedAt: " + updatedAt);
+	}
+	
+	@Test(priority = 1)
+	public void Test_Delete_user_reqres_005()
+	{
+		logger.info("*********Deleting Test_Delete_user_reqres_005****************");
+		Response response=Reqres_Endpoints.Delete_User_reqres(reqres);
+		
+		Assert.assertEquals(response.getStatusCode(),204);
+		Assert.assertTrue(response.getStatusLine().contains("204"));
+		 Assert.assertEquals(response.getStatusCode(), 204, "Expected 205 No Content");
+
+	}
 }
+
