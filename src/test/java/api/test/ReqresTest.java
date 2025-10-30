@@ -28,13 +28,21 @@ public class ReqresTest {
 		
 		reqres.setName(faker.name().username());
 		reqres.setJob("QA Automation Tester");	
+		//reqres.setEmail(faker.internet().emailAddress());
+//		String fakeEmail = faker.name().username() + "@reqres.in";
+//		reqres.setEmail(fakeEmail);
+		//reqres.setPassword(faker.internet().password());
+		
+		reqres.setEmail("eve.holt@reqres.in");
+    	reqres.setPassword("cityslicka");
+		
 		logger=LogManager.getLogger(this.getClass());
 	}
 	
 	@Test(priority = 1)
 	public void testPost_Reqres_01()
 	{
-		logger.info("*********&&******Creating user*********&&*********");
+		logger.info("*********&&******Creating user_testPost_Reqres_01*********&&*********");
 		Response response=Reqres_Endpoints.Create_Post_reqres(reqres);
 		response.then().log().all();
 		
@@ -62,6 +70,7 @@ public class ReqresTest {
 	@Test(priority = 1)
 	public void Test_Get_Reqres_002()
 	{
+		logger.info("*********Reading user_Test_Get_Reqres_002****************");
 		Response response=Reqres_Endpoints.get_reqresPage();
 		response.then().log().all();
 		
@@ -81,8 +90,19 @@ public class ReqresTest {
         // ✅ Validate data array
         List<Map<String, Object>> users = json.getList("data");
         Assert.assertEquals(users.size(), 6, "There should be 6 users on page 2");
+     }
+	
+	@Test(priority = -1)
+	public void Test_login_reqres_003()
+	{
+		logger.info("*********Reading _Test_login_reqres_003****************");
 
-
+		Response response=Reqres_Endpoints.Create_Login_reqres(reqres);
+		
+		response.then().log().all();
+		
+		Assert.assertEquals(response.getStatusCode(), 200);
+		Assert.assertNotEquals(response.jsonPath().getString("token"),"Token should not be null");
 	}
 	
 	 
